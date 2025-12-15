@@ -1,12 +1,10 @@
-import React from "react";
+import TodoListItem from "./TodoListItem";
 
-function TodoList() {
-  const todos = ["Buy groceries", "Finish homework", "Clean room"];
-
+function TodoList({ todoList }) {
   return (
     <ul>
-      {todos.map((item, index) => (
-        <li key={index}>{item}</li>
+      {todoList.map((todo) => (
+        <TodoListItem key={todo.id} todo={todo} />
       ))}
     </ul>
   );
